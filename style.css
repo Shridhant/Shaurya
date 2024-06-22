@@ -1,0 +1,169 @@
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+  transition: all 0.3s;
+}
+nav a {
+  color: blueviolet;
+}
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 3px;
+  width: 0%;
+  background-color: black;
+  transition: all 0.3s;
+}
+nav a:hover::before {
+  width: 100%;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: none;
+
+  min-width: 70%;
+  border-radius: 20px;
+  position: fixed;
+  top: 0px;
+  bottom: 80;
+}
+.boxes {
+  display: flex;
+  flex-direction: row;
+}
+.box1 {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+.box1 h1 {
+  font-size: 3rem;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.box2 {
+  height: 100vh;
+  width: 80vw;
+}
+.box2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+.sec-1 {
+  background: #ffffff;
+}
+.sec-1 p {
+  font-size: 1.2rem;
+}
+.sec-2 {
+  background: #eae0cc;
+}
+/* .sec-2 .images img {
+  mix-blend-mode: color-burn;
+} */
+.sec-3 {
+  background: #d6a6d7;
+}
+.sec-4 {
+  background: #c2c6a7;
+}
+
+.sec-3 h1 {
+  margin-bottom: 10px;
+}
+p {
+  font-size: 1.2rem;
+}
+section .images img {
+  width: 40vmin;
+  height: 56vmin;
+  margin: 0 30px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+
+  transition: all 0.4s ease;
+}
+.sec-3 .images img {
+  width: 45vmin;
+  height: 45vmin;
+  margin: 0 30px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+
+  transition: all 0.4s ease;
+}
+a {
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+a:nth-child(1):hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  filter: drop-shadow(10px 25px 30px #ff00f1);
+}
+a:nth-child(2):hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  filter: drop-shadow(10px 25px 30px red);
+}
+.sec-4 .images img:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 255, 255, 0.7);
+  scale: 1.1;
+}
+.sec-4 .images img:not(:hover) {
+  box-shadow: none;
+  opacity: 0.8;
+  scale: 0.9;
+}
+.sec-2 .images img:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 255, 255, 0.7);
+  scale: 1.1;
+}
+.sec-2 .images img:not(:hover) {
+  box-shadow: none;
+  opacity: 0.8;
+  scale: 0.9;
+}
